@@ -43,7 +43,7 @@ public class TestController : ControllerBase
         {
             Name = "姓名",
             Age = 18,
-            Gender = "我是不会变的哦"
+            Gender = "如果客户端没有提供本参数，那我的值不会被改变"
         };
         mapper.Map(input, entity);
 
