@@ -34,13 +34,13 @@ namespace Tubumu.PatchMapper
                 destination = new T();
             }
 
-            if (source.BoundKeys == null)
+            if (source.PatchKeys == null)
             {
                 return destination;
             }
 
             var sourceType = source.GetType();
-            foreach (var key in source.BoundKeys)
+            foreach (var key in source.PatchKeys)
             {
                 if (_propertySetters.TryGetValue(key, out var propertySetter))
                 {

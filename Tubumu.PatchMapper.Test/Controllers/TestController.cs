@@ -9,10 +9,12 @@ namespace Tubumu.PatchMapper.Test.Controllers;
 public class TestController : ControllerBase
 {
     private readonly ILogger<TestController> _logger;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public TestController(ILogger<TestController> logger)
+    public TestController(ILogger<TestController> logger, IHttpContextAccessor httpContextAccessor)
     {
         _logger = logger;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     [HttpGet]

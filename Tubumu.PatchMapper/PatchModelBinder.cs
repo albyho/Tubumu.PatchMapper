@@ -16,7 +16,7 @@ namespace Tubumu.PatchMapper
             await _internalModelBinder.BindModelAsync(bindingContext);
             if (bindingContext.Model is PatchInput model)
             {
-                model.BoundKeys = bindingContext.HttpContext.Request.Form.Keys;
+                model.PatchKeys = bindingContext.HttpContext.Request.Form.Keys;
             }
         }
     }
