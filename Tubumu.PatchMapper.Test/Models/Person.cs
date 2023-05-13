@@ -11,7 +11,7 @@ namespace Tubumu.PatchMapper.Test.Models
         public string? Gender { get; set; }
     }
 
-    public class PersionEntity
+    public class PersonEntity
     {
         public string Name { get; set; }
 

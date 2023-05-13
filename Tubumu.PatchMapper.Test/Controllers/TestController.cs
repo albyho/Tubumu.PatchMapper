@@ -34,12 +34,12 @@ public class TestController : ControllerBase
 
         var config = new MapperConfiguration(cfg =>
         {
-            cfg.CreateMap<PatchInput, PersionEntity>().ConvertUsing(new PatchConverter<PersionEntity>());
+            cfg.CreateMap<PatchInput, PersonEntity>().ConvertUsing(new PatchConverter<PersonEntity>());
         });
         var mapper = config.CreateMapper();
 
         // PersionEntity 有 3 属性，客户端如果提供 0 或 2 个参数，在 Map 时未提供参数的属性值不会被改变。
-        var entity = new PersionEntity
+        var entity = new PersonEntity
         {
             Name = "姓名",
             Age = 18,
