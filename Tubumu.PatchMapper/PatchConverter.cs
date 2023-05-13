@@ -26,25 +26,15 @@ namespace Tubumu.PatchMapper
             return lambdaExpression.Compile();
         }
 
-        /// <inheritdoc />
         public T Convert(PatchInput source, T destination, ResolutionContext context)
         {
-            if (destination == null)
-            {
-                destination = new T();
-            }
+            destination ??= new T();
 
-            if (source.PatchKeys == null)
-            {
-                return destination;
-            }
-
-            var sourceType = source.GetType();
-            foreach (var key in source.PatchKeys)
+            foreach (var key in source.PatchKeys ?? Enumerable.Empty<string>())
             {
                 if (_propertySetters.TryGetValue(key, out var propertySetter))
                 {
-                    var sourceValue = sourceType.GetProperty(key)?.GetValue(source)!;
+                    var sourceValue = source.GetType().GetProperty(key)?.GetValue(source)!;
                     propertySetter(destination, sourceValue);
                 }
             }
