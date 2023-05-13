@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using AutoMapper;
 
 namespace Tubumu.PatchMapper
 {

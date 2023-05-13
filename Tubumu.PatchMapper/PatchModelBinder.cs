@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Tubumu.PatchMapper
 {
