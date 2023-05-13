@@ -1,7 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Reflection;
 using AutoMapper;
-using Newtonsoft.Json.Linq;
 
 namespace Tubumu.PatchMapper
 {
