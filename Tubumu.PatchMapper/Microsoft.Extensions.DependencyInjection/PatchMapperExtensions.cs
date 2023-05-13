@@ -11,6 +11,5 @@ namespace Microsoft.Extensions.DependencyInjection
             services.Replace(ServiceDescriptor.Singleton<IModelBinderFactory, PatchModelBinderFactory>());
             return services;
         }
-
     }
 }
