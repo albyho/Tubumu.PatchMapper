@@ -16,6 +16,7 @@ public class Program
             //options.ModelBinderProviders.Insert(0, new KeysModelBinderProvider());
             options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
         });
+        builder.Services.AddHttpContextAccessor();
 
         builder.Services.AddPatchMapper();
 
