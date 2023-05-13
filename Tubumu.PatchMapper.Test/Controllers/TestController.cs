@@ -21,7 +21,7 @@ public class TestController : ControllerBase
         return Ok();
     }
 
-    [HttpPost]
+    [HttpPatch]
     [Route("patch")]
     public ActionResult Patch([FromForm] PersonInput input)
     {
