@@ -26,6 +26,7 @@ namespace Tubumu.PatchMapper
             return lambdaExpression.Compile();
         }
 
+        /// <inheritdoc />
         public T Convert(PatchInput source, T destination, ResolutionContext context)
         {
             destination ??= new T();
