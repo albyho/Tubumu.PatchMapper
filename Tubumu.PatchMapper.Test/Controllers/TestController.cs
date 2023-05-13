@@ -26,8 +26,9 @@ public class TestController : ControllerBase
     public ActionResult Patch([FromForm] PersonInput input)
     {
         // 1. 目前仅支持 `FromForm`，即 `x-www-form_urlencoded` 和 `form-data`；暂不支持 `FromBody` 如 `raw` 等。
-        // 3. 使用 ModelBinderFractory 创建 ModelBinder 而不是 ModelBinderProvider 以便于未来支持更多的输入格式。
-        // 3. 测试代码暂时将 AutoMapper 配置放在方法内。
+        // 2. 使用 ModelBinderFractory 创建 ModelBinder 而不是 ModelBinderProvider 以便于未来支持更多的输入格式。
+        // 3. 目前还没有支持多级结构。
+        // 4. 测试代码暂时将 AutoMapper 配置放在方法内。
 
         var config = new MapperConfiguration(cfg =>
         {
