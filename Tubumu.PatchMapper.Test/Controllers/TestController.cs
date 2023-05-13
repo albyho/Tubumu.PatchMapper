@@ -34,7 +34,7 @@ public class TestController : ControllerBase
 
         var config = new MapperConfiguration(cfg =>
         {
-            cfg.CreateMap<PatchInput, PersonEntity>().ConvertUsing(new PatchConverter<PersonEntity>());
+            cfg.CreateMap<PersonInput, PersonEntity>().ConvertUsing(new PatchConverter<PersonEntity>());
         });
         var mapper = config.CreateMapper();
 
